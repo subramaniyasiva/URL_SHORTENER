@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hi User</title>
+</head>
+<body>
+    <p>Welcome to my page</p>
+    {% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="siva1">
+        <button type="submit">Upload here</button>
+    </form>
+    {% endblock %}
+</body>
+</html>
